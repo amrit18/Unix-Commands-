@@ -1,0 +1,46 @@
+
+STORE first argument in the userinp variable
+
+IF userinp has a argument to process 
+THEN
+     SET userinp to remove all special characters.
+     COUNT number of digits and alphabetic characters in userinp
+     OUTPUT ‘Value to masher is:’ + userinp
+     
+ENDIF
+
+IF userinp has no argument to process
+THEN 
+    OUTPUT a help message
+ENDIF
+
+
+WHILE true
+     OUTPUT ‘Enter string:’
+     INPUT user enters a string
+     STORE the users input in the user variable
+     SET user to remove all special characters except “.”
+     COUNT number of digits and alphabetic characters in user 
+     COUNT total of user variable + total of userinp variable
+
+     IF user has no argument to process
+     THEN
+          OUTPUT ‘You need to enter a string in the prompt if you would’
+          OUTPUT ‘like to leave the string enter a . (full stop)
+     ENDIF
+
+     IF user = ‘.’
+     THEN
+         OUTPUT ‘Control value position’ + COUNT 
+         OUTPUT ‘Number of digits in string’ + COUNT 
+         OUTPUT ‘Number of alphabetic characters’ + COUNT 
+         OUTPUT ‘Number of non alpha numeric characters’ + COUNT 
+         OUTPUT ‘Total number of characters’ + COUNT 
+         OUTPUT ‘Characters mashed before control value’ + COUNT 
+         OUTPUT ’Total digits’ + COUNT 
+         OUTPUT ‘Total alpha characters’ + COUNT 
+         OUTPUT ‘Total characters’ + COUNT 
+         OUTPUT ’Total characters mashed before control’ + COUNT 
+         OUTPUT ‘Number of loops’ + COUNT 
+         BREAK
+      ENDIF
